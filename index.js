@@ -5,7 +5,7 @@ const app = express();
 app.use(express.json());
 app.use('/', routes);
 
-const PUERTO = 3000;
+const PUERTO = process.env.PORT || 3000;
 app.listen(PUERTO, () => {
   console.log(`\nAPI RPG corriendo en http://localhost:${PUERTO}`);
   console.log('\nEndpoints disponibles:');
